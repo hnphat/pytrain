@@ -1,0 +1,4 @@
+Tính pow 
+X = 2
+Y = 2
+Result = 4
