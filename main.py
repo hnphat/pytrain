@@ -1,20 +1,8 @@
-import speech_recognition as sr
-import pyttsx3
-
-r = sr.Recognizer()
-with sr.Microphone() as source:
-    print("Mời bạn nói: ")
-    audio = r.listen(source)
-try:
-    text = r.recognize_google(audio,language="vi-VI")
-    print("Bạn -->: {}".format(text))
-except:
-    print("Xin lỗi! tôi không nhận được voice!")
-    text = "Tôi không nhận được âm thanh"
-
-
-engine = pyttsx3.init()
-voice = engine.getProperty("voices")
-engine.setProperty("voice",voice[1].id)
-engine.say(text)
-engine.runAndWait()
+def checkMail(mail):
+    if (mail.find("@") < 0 or mail.count("@") > 1):
+        print("Email không hợp lệ")
+    else:
+        str = mail.split("@")
+        if (str[0] == "" or str[1] == ""): print("Địa chỉ và tên miền không được trống")
+        elif (str[1].find(".") < 0 or str[1].count(".") > 1): print("tên miền email không hợp lệ")
+        else: print("Email hợp lệ")
