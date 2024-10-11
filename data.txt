@@ -1,4 +1,4 @@
-Tính pow 
-X = 2
-Y = 2
-Result = 4
+Nguyễn Văn Nam,12B,18,Long Xuyên
+Nguyễn Văn Ban,12C,26,Cần Thơ
+Nguyễn Văn Cam,12D,33,Châu Đốc
+Nguyễn Văn Dam,12B,16,Hà Nội
