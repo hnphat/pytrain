@@ -51,13 +51,28 @@ def checkMail(mail):
         elif (str[1].find(".") < 0 or str[1].count(".") > 1): print("Tên miền email không hợp lệ")
         else: print("Email hợp lệ")
 
+# Number, String, Tuple ==> Immutable
+
 set1 = {1,2,3,4,5,"ABC",2.5,(1,2),True} 
 # Không sử dụng List trong Set (tập hợp)
 # Các giá trị trong tập hợp phải là các giá trị không thể thay đổi. Tập hợp thì có thể thêm bớt phần tử
 # Giá trị trong tập hợp là duy nhất (thêm trùng tập hợp tự bỏ)
 # Các phần tử trong tập hợp hổn loạn và không có thứ tự
 # Có thể sử dụng các phép toán trong tập hợp như: giao, hiệu, hợp
+# {sum(row) for row in M} => {24, 6, 15}
+# {i : sum(M[i]) for i in range(3)}  => {0: 6, 1: 15, 2: 24}
 list1 = [1,2,3,4,5,(1,2),{"a":1},True] # Như kiểu array gọi là list => sử dụng đc cách hàm thay đổi giá trị trong list
+# list(range(4))                          
+# [0, 1, 2, 3]
+# list(range(−6, 7, 2))                  
+# [−6, −4, −2, 0, 2, 4, 6]
+# [[x ** 2, x ** 3] for x in range(4)] 
+# [[0, 0], [1, 1], [4, 8], [9, 27]]
+# [[x, x / 2, x * 2] for x in range(−6, 7, 2) if x > 0]
+# [[2, 1, 4], [4, 2, 8], [6, 3, 12]]
+# a = [1,2,3,4]
+# b = a[10] if 10 in a else 0 ==> b = 0
+
 tuple1 = (1,2,3,4,5, (1,2), [1,2], {"A":1},True) 
 # Không thể thay đổi sau khi khởi tạo tuple => có thể thay đổi giá trị của list nằm bên trong tuple
 # Chỉ sử dụng được hàm lấy giá trị như len, index,...
@@ -623,4 +638,21 @@ def checkNamNhuan(nam):
 #     if (hs.checkDangKy() == True):
 #         hs.thongTinHocVien()
 #         hs.thongTinMonHoc()
+
+# Xử lý ma trận mới
+# M = [
+#     [1,2,3],
+#     [4,5,6],
+#     [7,8,9]
+# ]
+
+# col1 = [row[0] for row in M]
+#  [row[1] for row in M if row[1] % 2 == 0]  trích xuất giá trị khớp với bộ lọc 
+# diag = [M[i][i] for i in [0, 1, 2]
+# diag
+# [1, 5, 9]
+# doubles = [c * 2 for c in 'spam'] 
+# doubles
+# ['ss', 'pp', 'aa', 'mm']
+# print(col1)
 
